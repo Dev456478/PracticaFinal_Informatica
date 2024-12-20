@@ -1,0 +1,279 @@
+{
+	"name": "EventosFinal",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "gracias",
+					"sid": 358261739830149
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "again",
+					"sid": 671684948478851,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Si",
+					"sid": 205982872566354,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "no",
+					"sid": 996521430590236,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 335947084049806
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 767026006129103
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "again",
+					"sid": 883548652303308,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Si",
+					"sid": 467157840462500,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "no",
+					"sid": 228341069184683,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 419921951528951
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 863730774724222,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "gracias",
+					"sid": 669217457028939,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 929166301112599
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 873950660905047,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Si"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 810003604073314,
+					"parameters": {
+						"layout": "Juego"
+					}
+				}
+			],
+			"sid": 766657647933857
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 255244436181009,
+					"parameters": {
+						"object": "Si"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 307010660328351,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "Si",
+					"sid": 390893533975890,
+					"parameters": {
+						"color": "rgbEx255(0, 255, 255)"
+					}
+				}
+			],
+			"sid": 231934215248398
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 619575825348667
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 848074214360141,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "Si",
+					"sid": 889615626922922,
+					"parameters": {
+						"color": "rgbEx255(3, 156, 176)"
+					}
+				}
+			],
+			"sid": 709821025907234
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 422276206447059,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "no"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 999554013832862,
+					"parameters": {
+						"layout": "Menú inicio"
+					}
+				}
+			],
+			"sid": 743108824476945
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 359274658895127,
+					"parameters": {
+						"object": "no"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 149789214579817,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "no",
+					"sid": 563842807043679,
+					"parameters": {
+						"color": "rgbEx255(0, 255, 255)"
+					}
+				}
+			],
+			"sid": 483061027055179
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 588361606732420
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 873166509462567,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "no",
+					"sid": 535142385493320,
+					"parameters": {
+						"color": "rgbEx255(3, 156, 176)"
+					}
+				}
+			],
+			"sid": 717858188634415
+		}
+	],
+	"sid": 420527105184337
+}

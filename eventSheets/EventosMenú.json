@@ -1,0 +1,177 @@
+{
+	"name": "EventosMenú",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 915391968616988,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Jugar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 439797925118718,
+					"parameters": {
+						"layout": "Juego"
+					}
+				}
+			],
+			"sid": 338800502787272
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 214290329004773,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Salir"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Navegador",
+					"sid": 579872281326439
+				}
+			],
+			"sid": 146789665934902
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 238318751771460,
+					"parameters": {
+						"object": "Salir"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 692228218954549,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "Salir",
+					"sid": 578690868823622,
+					"parameters": {
+						"color": "rgbex255(0, 255, 255)"
+					}
+				}
+			],
+			"sid": 408739189872378
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 389908461311859
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 470745167849110,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "Salir",
+					"sid": 379711741982230,
+					"parameters": {
+						"color": "rgbex255(3, 156, 176)"
+					}
+				}
+			],
+			"sid": 729193961629972
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 811788798911431,
+					"parameters": {
+						"object": "Jugar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 221200806416807,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "Jugar",
+					"sid": 865197545872493,
+					"parameters": {
+						"color": "rgbex255(0, 255, 255)"
+					}
+				}
+			],
+			"sid": 701555619252185
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 532249375389030
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 495951073593278,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "Jugar",
+					"sid": 959522433152644,
+					"parameters": {
+						"color": "rgbex255(3, 156, 176)"
+					}
+				}
+			],
+			"sid": 463133938272872
+		}
+	],
+	"sid": 331573415375859
+}

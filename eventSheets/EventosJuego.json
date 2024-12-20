@@ -1,0 +1,729 @@
+{
+	"name": "EventosJuego",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Requerido",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 734265253312246
+		},
+		{
+			"eventType": "variable",
+			"name": "Progreso",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 827365290487565
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 885279760893652
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "Progreso",
+					"sid": 476521607002942,
+					"parameters": {
+						"width": "(Progreso/Requerido)*398"
+					}
+				}
+			],
+			"sid": 105663124496548
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 330574006715338
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 879513542790217,
+					"parameters": {
+						"variable": "Requerido",
+						"value": "18"
+					}
+				}
+			],
+			"sid": 448803155169444
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 409687346379576,
+					"parameters": {
+						"variable": "Progreso",
+						"comparison": 4,
+						"value": "9"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Slime",
+					"sid": 432102221499040,
+					"parameters": {
+						"animation": "\"HappyAnimation\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 675183796746535
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 187806728451963,
+					"parameters": {
+						"object": "cpu"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 765251858682782,
+					"parameters": {
+						"object": "cpu_cooler"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 803762838530197,
+					"parameters": {
+						"object": "Placa_base"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 248918816977233,
+					"parameters": {
+						"object": "Grafica"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 512733741125525,
+					"parameters": {
+						"object": "psu"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 890818767648055,
+					"parameters": {
+						"object": "ram"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 686034253506313,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				}
+			],
+			"sid": 381989251309178
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 830990700613417
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 745027944161731,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 591000999204955
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "TextoPlacaBase",
+					"sid": 677261668921208,
+					"parameters": {
+						"text": "\"Placa Base\"",
+						"case": "case-insensitive"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 527967803802801
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 115373437360247,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "TextoPlacaBase",
+					"sid": 417620451496094,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Placa_base",
+					"sid": 521681547794637,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 940243743730138
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Placa_base",
+					"sid": 635114979561081,
+					"parameters": {
+						"object": "SpriteVacio_PlacaBase"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 299836629092994,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "1"
+					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "Placa_base",
+					"sid": 320134308605789,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "ATX_Case",
+						"image-point": "1",
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 231715290708556
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "TextoPSU",
+					"sid": 609835823428197,
+					"parameters": {
+						"text": "\"PSU\"",
+						"case": "case-insensitive"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 569698296317775
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 218183354337537,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "TextoPSU",
+					"sid": 151276712785398,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "psu",
+					"sid": 730374858506716,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 455844059818881
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "psu",
+					"sid": 905202027145746,
+					"parameters": {
+						"object": "SpriteVacio_PSU"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 817612787412305,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "1"
+					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "psu",
+					"sid": 277574934646919,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "ATX_Case",
+						"image-point": "2",
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 780629121330759
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "TextoCPU",
+					"sid": 498883898920675,
+					"parameters": {
+						"text": "\"CPU\"",
+						"case": "case-insensitive"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 909450200356397
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 987202176877808,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "TextoCPU",
+					"sid": 143575265381331,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "cpu",
+					"sid": 801040668110171,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 197378295184448
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "cpu",
+					"sid": 696587735017449,
+					"parameters": {
+						"object": "SpriteVacio_CPU"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 572530806102277,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "1"
+					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "cpu",
+					"sid": 892880381771033,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "Placa_base",
+						"image-point": "1",
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 662131782895651
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "TextoCPU_Cooler",
+					"sid": 664156298265275,
+					"parameters": {
+						"text": "\"CPU Cooler\"",
+						"case": "case-insensitive"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 155455838119695
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 192132925915425,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "TextoCPU_Cooler",
+					"sid": 384034175770576,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "cpu_cooler",
+					"sid": 235475981980008,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 754148616073604
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "cpu_cooler",
+					"sid": 850838402594587,
+					"parameters": {
+						"object": "SpriteVacio_CPU"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 325827461462755,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "1"
+					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "cpu_cooler",
+					"sid": 665287088080588,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "Placa_base",
+						"image-point": "1",
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 686348733355234
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "TextoRAM",
+					"sid": 828724718216829,
+					"parameters": {
+						"text": "\"RAM\"",
+						"case": "case-insensitive"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 753765523944511
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 509174929098493,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "TextoRAM",
+					"sid": 941266182820972,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "ram",
+					"sid": 403507800940728,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 805204354528248
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ram",
+					"sid": 719579032531312,
+					"parameters": {
+						"object": "SpriteVacio_RAM"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 515955531925612,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "1"
+					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "ram",
+					"sid": 959252722979946,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "Placa_base",
+						"image-point": "3",
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 224802222665872
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "TextoGrafica",
+					"sid": 640178558979613,
+					"parameters": {
+						"text": "\"GPU\"",
+						"case": "case-insensitive"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 766027344574219
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 238038094898473,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "TextoGrafica",
+					"sid": 752244582772154,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Grafica",
+					"sid": 109149661902667,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 223827642162688
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Grafica",
+					"sid": 338004877632894,
+					"parameters": {
+						"object": "SpriteVacio_Grafica"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 958047061082699,
+					"parameters": {
+						"variable": "Progreso",
+						"value": "1"
+					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "Grafica",
+					"sid": 428019061252193,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "Placa_base",
+						"image-point": "2",
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 469996228814847
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 366577801282632,
+					"parameters": {
+						"variable": "Progreso",
+						"comparison": 5,
+						"value": "18"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 802910518494075,
+					"parameters": {
+						"layout": "Final"
+					}
+				}
+			],
+			"sid": 932823564643886
+		}
+	],
+	"sid": 291460354098705
+}
