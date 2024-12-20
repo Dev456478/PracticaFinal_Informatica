@@ -1,0 +1,62 @@
+{
+	"name": "psu",
+	"plugin-id": "Sprite",
+	"sid": 439597207344901,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastrarYSoltar",
+			"sid": 784898085835759
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pegado",
+			"sid": 744728452517215
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 550,
+						"height": 343,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4004801,
+						"collisionPoly": {
+							"points": [
+								0.052727272727272734,
+								0.2128279883381924,
+								0.6745454545454541,
+								0.24198250728862997,
+								0.6581818181818175,
+								0.7755102040816324,
+								0.05636363636363637,
+								0.7725947521865898
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 229214495564956,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
